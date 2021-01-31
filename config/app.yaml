@@ -1,0 +1,26 @@
+---
+plugins:
+  - tag
+  - user
+  - security
+  - db
+  - crisp
+  - errors
+
+database: 
+  host: localhost
+  username: localuser
+  password: localpassword
+  db: slact
+
+logger:
+  logTo: nowhere
+#        db/file/nowhere
+  
+#  prod:
+#    debug: 0
+#    database: 
+#      host: <production host>
+#      username: <username>
+#      password: <password>
+#      db: <database>

@@ -1,0 +1,19 @@
+AddHandler fastcgi-script fcgi
+
+AddHandler io-fcgi .io
+
+AddHandler php-fcgi .php
+Action php-fcgi /cgi-bin/php5.fcgi
+
+Action io-cgi /cgi-bin/io.cgi
+Action io-fcgi /cgi-bin/Io.fcgi
+Options +FollowSymLinks
+
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  #if file doesn't exist, talk to the controller 
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ /index.io [QSA,L]
+</IfModule>

@@ -1,0 +1,1 @@
+doFile(method(call message label) call pathComponent pathComponent .. "/bootstrap.io")
